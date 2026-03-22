@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yield-engine-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=Development
+      - PORT=8000

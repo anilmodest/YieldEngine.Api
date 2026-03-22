@@ -1,0 +1,29 @@
+properties:
+  configuration:
+    ingress:
+      external: true
+      targetPort: 8000
+  template:
+    containers:
+      - name: yield-engine-api
+        image: ghcr.io/anilmodest/yield-engine-api:PLACEHOLDER_SHA
+        env:
+          - name: ENVIRONMENT
+            value: "PLACEHOLDER_ENV"
+          - name: PORT
+            value: "8000"
+          - name: FLASK_SECRET_KEY
+            value: "PLACEHOLDER_FLASK_SECRET"
+          - name: KITE_API_KEY
+            value: ""
+          - name: KITE_API_SECRET
+            value: ""
+          - name: KITE_USER_ID
+            value: ""
+          - name: KITE_TOTP_SECRET
+            value: ""
+          - name: SQLITE_DB_PATH
+            value: "/data/yield_engine.db"
+        resources:
+          cpu: 0.5
+          memory: 1.0Gi
