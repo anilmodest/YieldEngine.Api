@@ -1,2 +1,7 @@
 flask==3.1.0
+flask-cors==5.0.1
 gunicorn==23.0.0
+scipy==1.14.1
+kiteconnect==5.0.1
+pyotp==2.9.0
+apscheduler==3.10.4
